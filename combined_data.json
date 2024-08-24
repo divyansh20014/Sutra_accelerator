@@ -1,0 +1,66 @@
+{
+    "customer_profile": [
+        {
+            "name": "full_name",
+            "value": "John Doe"
+        },
+        {
+            "name": "date_of_birth",
+            "value": "1985-03-25"
+        },
+        {
+            "name": "address",
+            "value": "123 Elm St, Springfield"
+        },
+        {
+            "name": "last_transaction_amount",
+            "value": "250.75"
+        },
+        {
+            "name": "phone_number",
+            "value": "+1-555-1234"
+        },
+        {
+            "name": "account_number",
+            "value": "000123456789"
+        },
+        {
+            "name": "account_balance",
+            "value": "1500.0"
+        },
+        {
+            "name": "last_transaction_time",
+            "value": "2024-08-22T20:45:58.082491"
+        },
+        {
+            "name": "transaction_count_last_20_minutes",
+            "value": "3"
+        }
+    ],
+    "transaction": [
+        {
+            "name": "custID",
+            "value": "1"
+        },
+        {
+            "name": "transaction_amount",
+            "value": "15000.0"
+        },
+        {
+            "name": "timestamp",
+            "value": "2024-08-23T16:55:07.999868"
+        },
+        {
+            "name": "country",
+            "value": "North Korea"
+        },
+        {
+            "name": "region",
+            "value": "Pyongyang"
+        },
+        {
+            "name": "occupation",
+            "value": "Politician"
+        }
+    ]
+}
