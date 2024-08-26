@@ -87,7 +87,7 @@ def combine_transaction_and_profile(transaction):
         return combined_data
     return None
 
-@app.route('/api/combined-data', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_combined_data():
     """
     API endpoint to get combined transaction and customer profile data.
