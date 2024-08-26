@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Define the path to the JSON file containing the combined data
 JSON_FILE_PATH = 'combined_data.json'
 
-@app.route('/api/combined-data', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_combined_data():
     """
     API endpoint to get combined transaction and customer profile data from JSON file.
