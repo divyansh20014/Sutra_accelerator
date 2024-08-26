@@ -41,7 +41,7 @@ app = Flask(__name__)
 
 # Define the testing transaction data directly in app.py
 transaction_data = {
-    'custID': 5,  # Change this ID as needed for testing
+    'custID': 1,  # Change this ID as needed for testing
     'transaction_amount': 15000.00,
     'timestamp': '2024-08-23T16:55:07.999868',
     'country': 'North Korea',
