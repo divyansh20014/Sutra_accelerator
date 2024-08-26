@@ -86,7 +86,7 @@ def format_profile_or_transaction(data_dict):
     """
     return [{"name": key, "value": str(value)} for key, value in data_dict.items()]
 
-@app.route('/api/combined-data', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_combined_data():
     """
     API endpoint to get combined transaction and customer profile data.
