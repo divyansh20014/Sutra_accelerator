@@ -43,7 +43,7 @@ def create_customer_profile_table():
     """
     
     entries = [
-        ("John Doe", "1985-03-25", "123 Elm St, Springfield", 250.75, "+1-555-1234", "000123456789", 1500.00, datetime.now() - timedelta(minutes=5), 3),
+        ("John D", "1985-03-25", "123 Elm St, Springfield", 250.75, "+1-555-1234", "000123456789", 1500.00, datetime.now() - timedelta(minutes=5), 3),
         ("Jane Smith", "1990-07-13", "456 Oak St, Springfield", 320.50, "+1-555-5678", "000987654321", 2200.00, datetime.now() - timedelta(minutes=10), 2),
         ("Alice Johnson", "1982-11-30", "789 Pine St, Springfield", 1500.00, "+1-555-8765", "000112233445", 5000.00, datetime.now() - timedelta(minutes=15), 1),
         ("Bob Brown", "1975-09-22", "101 Maple St, Springfield", 75.00, "+1-555-4321", "000556677889", 800.00, datetime.now() - timedelta(minutes=18), 4),
