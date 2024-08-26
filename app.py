@@ -34,6 +34,33 @@
 
 # app.py
 
+from flask import Flask, jsonify
+from fetch_customer_profile import get_customer_profile
+
+app = Flask(__name__)
+
+# Define the testing transaction data directly in app.py
+transaction_data = {
+    'custID': 5,  # Change this ID as needed for testing
+    'transaction_amount': 15000.00,
+    'timestamp': '2024-08-23T16:55:07.999868',
+    'country': 'North Korea',
+    'region': 'Pyongyang',
+    'occupation': 'Politician'
+}
+
+def format_profile_or_transaction(data_dict):
+    """
+    Transform a dictionary into a list of dictionaries with 'name' and 'value' keys.
+    
+    Args:
+    - data_dict (dict): The original dictionary to be transformed.
+
+    Returns:
+    - list: A list of dictionaries with 'name' and 'value' keys.
+    """
+    return [{"name": key, "value": str(value)} for key, value in data_dict.items()]
+
 def combine_transaction_and_profile(transaction):
     """
     Combine transaction data with customer profile data and return as a dictionary.
@@ -79,3 +106,5 @@ def get_combined_data():
     except Exception as e:
         return jsonify({"error": f"Failed to combine data - {str(e)}"}), 500
 
+# if __name__ == "__main__":
+#     app.run(host='0.0.0.0', port=4000, debug=True)
