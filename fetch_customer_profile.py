@@ -56,6 +56,8 @@
     
 #     return None
 
+# fetch_customer_profile.py
+
 import psycopg2
 import json
 from datetime import datetime
@@ -70,15 +72,13 @@ def get_customer_profile(customer_id):
     Returns:
     - dict: Customer profile data if successful, else None.
     """
-    conn = None
-    cursor = None
     try:
         conn = psycopg2.connect(
-            database="mydb",
-            user="postgres",
-            password="Admin@123",
-            host="127.0.0.1",
-            port="5432"
+            database="defaultdb",
+            user="avnadmin",
+            password="AVNS_2XQTCdBeEubwHxg8p7A",
+            host="pg-3986967a-gupta-e6ec.h.aivencloud.com",
+            port="28514"
         )
         cursor = conn.cursor()
 
@@ -108,12 +108,12 @@ def get_customer_profile(customer_id):
                 "transaction_count_last_20_minutes": int(row[8])
             }
             return profile
+        else:
+            print(f"No profile found for customer_id: {customer_id}")
     except Exception as e:
         print(f"Error fetching customer profile: {e}")
     finally:
-        if cursor:
-            cursor.close()
-        if conn:
-            conn.close()
+        cursor.close()
+        conn.close()
     
     return None
